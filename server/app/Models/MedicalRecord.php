@@ -5,7 +5,7 @@ namespace App\Models;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
 
-class Patient extends Model {
+class MedicalRecord extends Model {
     use HasFactory;
 
     /**
@@ -14,14 +14,11 @@ class Patient extends Model {
      * @var array<int, string>
      */
     protected $fillable = [
-        'first_name',
-        'last_name',
-        'date_of_birth',
-        'gender',
-        'address',
-        'phone',
-        'email',
-        'emergency_contanct',
-        'medical_history'
+        'patient_id',
+        'doctor_id',
+        'visit_date',
+        'diagnosis',
+        'treatment',
+        'notes'
     ];
 }
