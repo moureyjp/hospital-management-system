@@ -21,7 +21,7 @@ class Patient extends Model {
         'address',
         'phone',
         'email',
-        'emergency_contanct',
+        'emergency_contact',
         'medical_history'
     ];
 }
