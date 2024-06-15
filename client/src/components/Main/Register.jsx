@@ -1,4 +1,4 @@
-import { Link } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 import { useState } from "react";
 import axios from "axios";
 
@@ -17,6 +17,7 @@ const Register = () => {
     email: "",
     password: "",
   });
+  const navigate = useNavigate();
 
   const handleChange = (e) => {
     const { name, value } = e.target;
@@ -47,7 +48,7 @@ const Register = () => {
           role: "patient",
         }
       );
-      console.log(response.data);
+      navigate("/");
     } catch (error) {
       console.error(error);
     }
